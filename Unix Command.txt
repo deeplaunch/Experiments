@@ -1,0 +1,35 @@
+============
+Start Notebook
+============
+activate d:\usr-profiles\PZhao\AppData\Local\conda\conda\envs\py35
+
+set PATH= d:\usr-profiles\PZhao\AppData\Local\conda\conda\envs\tensorflow\cuda\bin; C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin;%PATH%
+cd /d U:\My Documents\Python
+jupyter notebook
+
+============
+Installation
+============
+conda config --set ssl_verify false
+conda install git
+conda install -c quantopian zipline
+pip3 install --trusted-host pypi.org --trusted-host files.pythonhosted.org --proxy wsproxy:8080 --user scikit-learn
+
+================
+Github function
+================
+git config --global http.sslVerify false
+git init
+git add README.md
+echo "# Title" >> README.md
+git commit -m "first commit"
+git remote add origin https://github.com/do2do/BankCrisis.git
+git push -u origin master
+
+=================
+Environment
+=================
+conda info -e
+cd d:\usr-profiles\PZhao\
+conda env list
+(note: for each newly created envorionment, need to run "conda install jupyter notebook")
