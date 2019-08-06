@@ -1,35 +1,43 @@
-============
-Start Notebook
-============
-activate d:\usr-profiles\PZhao\AppData\Local\conda\conda\envs\py35
-
-set PATH= d:\usr-profiles\PZhao\AppData\Local\conda\conda\envs\tensorflow\cuda\bin; C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin;%PATH%
-cd /d U:\My Documents\Python
-jupyter notebook
-
-============
+================
 Installation
-============
+================
 conda config --set ssl_verify false
 conda install git
 conda install -c quantopian zipline
-pip3 install --trusted-host pypi.org --trusted-host files.pythonhosted.org --proxy wsproxy:8080 --user scikit-learn
+conda list python
+pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org --proxy wsproxy:8080 --user --no-warn-script-location
+pip search --trusted-host pypi.org --trusted-host files.pythonhosted.org --proxy wsproxy:8080
+pip list
 
-================
+==================
 Github function
-================
+==================
 git config --global http.sslVerify false
 git init
 git add README.md
-echo "# Title" >> README.md
-git commit -m "first commit"
-git remote add origin https://github.com/do2do/BankCrisis.git
+echo "# Title of Repository" >> README.md
+git commit -m "my commit"	
+git remote add origin https://github.com/deeplaunch/BankCrisis.git
 git push -u origin master
+git fork (make sure to use this to build another project from existing repo, if "clone", "push" will be in others' original repo)
 
-=================
+===================
 Environment
-=================
+###Important: for each newly created envorionment, need to run "conda install jupyter notebook"
+===================
 conda info -e
-cd d:\usr-profiles\PZhao\
 conda env list
-(note: for each newly created envorionment, need to run "conda install jupyter notebook")
+conda create --name myclone --clone myenv
+conda search
+conda list
+which python
+ 
+=====================
+Start Notebook 
+####Important: make sure to use "command prompt" instead of "conda command" which doesn't use packages in env
+=====================
+activate d:\usr-profiles\PZhao\AppData\Local\conda\conda\envs\py35
+set PATH= d:\usr-profiles\PZhao\AppData\Local\conda\conda\envs\tensorflow\cuda\bin; C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin;%PATH%
+cd /d U:\My Documents\Python
+jupyter notebook
+cd d:\usr-profiles\PZhao\
