@@ -11,6 +11,7 @@
 *.xlsx
 *.xls
 *.w2v
+*.json
 
 ## add data folder 
 *data/
